@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page365 API | Test github action | API Reference</title>
+    <title>Page365 API | API Reference</title>
     <link rel="stylesheet" href="stylesheets/foundation.min.css" />
     <link rel="stylesheet" href="stylesheets/spectacle.min.css" />
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -17,7 +17,7 @@
           <span aria-hidden="true">×</span>
         </button>
         <div id="logo">
-          <img src="images/logo.png" title="Page365 API | Test github action" /> </div>
+          <img src="images/logo.png" title="Page365 API" /> </div>
         <nav id="nav" role="navigation">
           <h5>Topics</h5>
           <a href="#introduction">Introduction</a>
@@ -89,14 +89,14 @@
         </button>
         <div class="example-box doc-content"></div>
         <article>
-          <h1 class="doc-title">Page365 API | Test github action
+          <h1 class="doc-title">Page365 API
             <span>API Reference</span>
           </h1>
           <div id="introduction" data-traverse-target="introduction">
             <div class="doc-row">
               <div class="doc-copy">
-                <p>Welcome to Page365 API. This standard allows you to become a supported partner, manage order and inventory for over 300,000 merchants on the Page365 platform.</p>
-                <p>API is implemented in standard GraphQL protocol, and we do not yet have language libraries available. You can view examples for how to invoke the requests in the dark area to the right.</p>
+                <p>Welcome to Page365 API. Page365 allow access to merchant information on Page365 ecosystem by external software (API) for the greater service and merchant convenience.</p>
+                <p>This API use GraphQL as standard protocol. Implement by follow document below.</p>
               </div>
               <div class="doc-examples">
                 <section>
@@ -114,7 +114,7 @@ https://api.page365.com/v1.0/graphql
           <h1 id="tag-Registation" class="swagger-summary-tag" data-traverse-target="tag-Registation">Registation</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy">
-              <p>Create your app profile and use it as main account to communicate with Page365. After your create profile request send, Please contact us for approvng your profile and we will send you a SECRET_KEY. Which your software will use it as credential for granting merchant token</p>
+              <p>Before using API, you need to register your app profile and get approve by Page365 and we will send you SECRET_KEY for using in authentication process as flowchart below.</p>
               <div class="diagram">
                 <img src="images/registration.png" title="registration.png" /> </div>
             </div>
@@ -134,7 +134,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Create a profile which you will use to communicate with Page365</p>
+                  <p>Create profile for using in authentication process and grant permission to fetch merchant information. These argument some will be display to merchant for notify them that your integration is available such as name, some will be use for report and notify an update (deprecate API) such as phone and email</p>
                 </section>
               </div>
             </div>
@@ -275,7 +275,9 @@ https://api.page365.com/v1.0/graphql
           <h1 id="tag-Authentication" class="swagger-summary-tag" data-traverse-target="tag-Authentication">Authentication</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy">
-              <p>By query merchant information you need to grant access token which unique per merchant (1-to-1).</p>
+              <p>After profile approved, Page365 will send you SECRET_KEY which will be use as part of access token creating process. Access token is needed for every request as an identifier and each merchant will use difference unique access token even from the same profile.</p>
+              <p>In access token creation process you will need 2 parameters (SECRET_KEY, MERCHANT_TOKEN) you can find MERCHANT_TOKEN from each merchant directly and</p>
+              <p>PROVIDER NEEDS TO KEEP MERCHANT_TOKEN IN PRIVATE AND NOT ALLOW TO PUBLIC TOKEN TO OTHER</p>
               <div class="diagram">
                 <img src="images/authentication.png" title="authentication.png" /> </div>
             </div>
@@ -295,7 +297,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Generate access token for accessing merchant information</p>
+                  <p>Generate access token for using in identification when calling API</p>
                 </section>
               </div>
             </div>
@@ -426,7 +428,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>All product owned by mechant</p>
+                  <p>Fetch all product information owned by merchant</p>
                 </section>
               </div>
             </div>
@@ -670,7 +672,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Eligible product owned by mechant</p>
+                  <p>Fetch product information by id</p>
                 </section>
               </div>
             </div>
@@ -848,7 +850,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>All product category owned by mechant</p>
+                  <p>Fetch all product category information owned by merchant</p>
                 </section>
               </div>
             </div>
@@ -1036,7 +1038,7 @@ https://api.page365.com/v1.0/graphql
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Eligible product category owned by mechant</p>
+                  <p>Fetch product category information by id</p>
                 </section>
               </div>
             </div>
