@@ -99,6 +99,7 @@
           <a href="#definition-OrderItem"> OrderItem </a>
           <a href="#definition-PaymentSlip"> PaymentSlip </a>
           <a href="#definition-Photo"> Photo </a>
+          <a href="#definition-PhotosProduct"> PhotosProduct </a>
           <a href="#definition-Product"> Product </a>
           <a href="#definition-ProductCategory"> ProductCategory </a>
           <a href="#definition-ProductCategoryConnection"> ProductCategoryConnection </a>
@@ -2024,6 +2025,19 @@ https://api.page365.net/v1.0/graphql
                     <dd>
                       <p>Unique object reference number</p>
                     </dd>
+                    <dt data-property-name="source" class="has-description">
+                      <span class="json-property-name">source:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Source</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -2034,7 +2048,8 @@ https://api.page365.net/v1.0/graphql
                   <html>
                   <head></head>
                   <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -3827,11 +3842,115 @@ https://api.page365.net/v1.0/graphql
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;album&quot;</span>: {
-    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;thumbnail&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-PhotosProduct" class="definition panel" data-traverse-target="definition-PhotosProduct">
+            <h2 class="panel-title">
+              <a name="/definitions/PhotosProduct"></a>PhotosProduct: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="name" class="has-description">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Photo name</p>
+                    </dd>
+                    <dt data-property-name="photoAlbum" class="has-description">
+                      <span class="json-property-name">photoAlbum:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Album">Album</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Album</p>
+                    </dd>
+                    <dt data-property-name="photoId" class="has-description">
+                      <span class="json-property-name">photoId:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-number">
+                          <a class="json-schema-ref" href="#/definitions/Int">Int</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Photo id</p>
+                    </dd>
+                    <dt data-property-name="position" class="has-description">
+                      <span class="json-property-name">position:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-number">
+                          <a class="json-schema-ref" href="#/definitions/Int">Int</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Use for image sorting</p>
+                    </dd>
+                    <dt data-property-name="thumbnail" class="has-description">
+                      <span class="json-property-name">thumbnail:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Photo thumbnail</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;photoAlbum&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  },
+  <span class="hljs-attr">&quot;photoId&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;position&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;thumbnail&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -3960,7 +4079,19 @@ https://api.page365.net/v1.0/graphql
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
-                      <p>Image</p>
+                      <p>Thumbnail detail</p>
+                    </dd>
+                    <dt data-property-name="photosProducts" class="has-description">
+                      <span class="json-property-name">photosProducts:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/PhotosProduct">PhotosProduct</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Product images</p>
                     </dd>
                     <dt data-property-name="price" class="has-description">
                       <span class="json-property-name">price:</span>
@@ -4380,7 +4511,8 @@ https://api.page365.net/v1.0/graphql
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;album&quot;</span>: {
-    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
   <span class="hljs-attr">&quot;albumName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;autoImport&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -4430,8 +4562,7 @@ https://api.page365.net/v1.0/graphql
                     <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                     <span class="hljs-attr">&quot;orders&quot;</span>: [
                       {
-                        <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                        <span class="hljs-attr">&quot;bankAccount&quot;</span>: {}
+                        <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
                       }
                     ]
                   }
@@ -4519,7 +4650,8 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;cursor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;node&quot;</span>: {
         <span class="hljs-attr">&quot;album&quot;</span>: {
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
         },
         <span class="hljs-attr">&quot;albumName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;autoImport&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -4565,8 +4697,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                           <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                         }
                       }
                     }
@@ -4641,7 +4772,8 @@ https://api.page365.net/v1.0/graphql
   <span class="hljs-attr">&quot;cursor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;node&quot;</span>: {
     <span class="hljs-attr">&quot;album&quot;</span>: {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     },
     <span class="hljs-attr">&quot;albumName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;autoImport&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -4690,7 +4822,7 @@ https://api.page365.net/v1.0/graphql
                       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;orders&quot;</span>: [
-                        {}
+                        <span class="hljs-literal">null</span>
                       ]
                     }
                   }
