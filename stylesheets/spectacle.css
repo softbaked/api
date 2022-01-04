@@ -32,6 +32,13 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     color: #f68b1f;
     text-transform: uppercase;
     font-size: 0.9rem; }
+  #spectacle .swagger-webhook-body:before {
+    content: "Webhook body";
+    display: block;
+    margin-bottom: 0.5em;
+    color: #f68b1f;
+    text-transform: uppercase;
+    font-size: 0.9rem; }
   #spectacle .swagger-request-body:before {
     content: "";
     display: block;
@@ -285,6 +292,11 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     font-size: 0.75rem;
     border-radius: 4px;
     padding: 3px 6px; }
+  #spectacle .webhook-section {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #f68b1f;
+    font-size: .9rem; }
   #spectacle #logo {
     text-align: center;
     padding-right: 0.5rem;
