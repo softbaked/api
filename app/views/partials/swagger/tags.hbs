@@ -1,5 +1,5 @@
 {{#each tags}}
-    <h1 id="tag-{{htmlId name}}" class="swagger-summary-tag" data-traverse-target="tag-{{htmlId name}}">{{name}}</h1>
+    <h1 id="tag-{{htmlId name}}" class="swagger-summary-tag" data-traverse-target="tag-{{htmlId name}}" style="color: black;">{{name}}</h1>
     {{#if description}}
       <div class="tag-description doc-row">
         <div class="doc-copy" style="float: left;">
@@ -10,7 +10,7 @@
             </div>
           {{/if}}
           {{#each sections}}
-            <div style="border-bottom: 1px solid #e2e2e2; font-size:24px;">#{{this.name}}</div>
+            <div style="border-bottom: 1px solid #e2e2e2; font-size:24px; padding-top: 2em;">#{{this.name}}</div>
             <section class="swagger-operation-description" style="padding-top: 1.5em;">
               <div>{{this.desc}}</div>
             </section>

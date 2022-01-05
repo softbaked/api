@@ -204,6 +204,55 @@ domains:
                 type: ISO8601DateTime
                 desc: Update at.
         example_link: https://gist.github.com/jaikox2/aff78611b25f33eaa242e85a2715062e.js
+      - name: "Customer event"
+        desc: | 
+          Page365 will send to webhook url a customer object when the customer has updated or created.
+        webhook_body:
+          - field: key
+            type: String
+            desc: event type should be "customer.create" for create event and "customer.update" for update event
+          - field: merchantToken
+            type: String
+            desc: a token reference with the merchant account.
+          - field: body
+            type: customer object
+            desc: a customer object.
+        sub_body:
+          - section_name: Customer object
+            fields:
+              - field: id
+                type: ID
+                desc: Unique object reference number.
+              - field: name
+                type: String
+                desc: Name.
+              - field: phone
+                type: String
+                desc: Phone.
+              - field: email
+                type: String
+                desc: Email.
+              - field: address
+                type: String
+                desc: Address.
+              - field: note
+                type: String
+                desc: Note.
+              - field: type
+                type: String
+                desc: Plateform which customer come from.
+              - field: tags
+                type: "Array<tag>"
+                desc: Customer tags.
+          - section_name: Tag object
+            fields:
+              - field: id
+                type: ID
+                desc: Unique object reference number.
+              - field: name
+                type: String
+                desc: Name.
+        example_link: https://gist.github.com/jaikox2/657df7686bab584abdeb6162fb8194e0.js
   - name: Product
     description: Fetch merchant product information
     usecases:
