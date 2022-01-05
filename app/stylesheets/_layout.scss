@@ -28,6 +28,15 @@ button:focus {
   font-size: .9rem;
 }
 
+.doc-copy a {
+  color: black;
+  cursor: default;
+}
+
+.swagger-responses a {
+  color: $primary-color;
+}
+
 //
 // Topbar layout
 
