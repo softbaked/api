@@ -148,7 +148,7 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Registation" class="swagger-summary-tag" data-traverse-target="tag-Registation">Registation</h1>
+          <h1 id="tag-Registation" class="swagger-summary-tag" data-traverse-target="tag-Registation" style="color: black;">Registation</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>Before using API, you need to register your app profile and get approve by Page365 and we will send you SECRET_KEY for using in authentication process as flowchart below.</p>
@@ -327,7 +327,7 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Authentication" class="swagger-summary-tag" data-traverse-target="tag-Authentication">Authentication</h1>
+          <h1 id="tag-Authentication" class="swagger-summary-tag" data-traverse-target="tag-Authentication" style="color: black;">Authentication</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>After profile approved, Page365 will send you SECRET_KEY which will be use as part of access token creating process. Access token is needed for every request as an identifier and each merchant will use difference unique access token even from the same profile.</p>
@@ -462,14 +462,14 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Webhooks" class="swagger-summary-tag" data-traverse-target="tag-Webhooks">Webhooks</h1>
+          <h1 id="tag-Webhooks" class="swagger-summary-tag" data-traverse-target="tag-Webhooks" style="color: black;">Webhooks</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>After the profile is approved and allowed by the merchant account, Page365 will send an event that has occurred on the merchant account.</p>
               <p>Validating Payloads: - Every webhook will have SHA1 signature included in the request&#39;s X-Hub-Signature header, preceded with sha1=. You don&#39;t have to validate the payload, but you should.</p>
               <p>To validate the payload: - Generate a SHA1 signature using the payload and your secret_key - Compare your signature to the signature in the X-Hub-Signature header (everything after sha1=). If the signatures match, the payload is genuine.</p>
               <p>HTTP method: - Use POST http method for send to webhook url.</p>
-              <div style="border-bottom: 1px solid #e2e2e2; font-size:24px;">#Order event</div>
+              <div style="border-bottom: 1px solid #e2e2e2; font-size:24px; padding-top: 2em;">#Order event</div>
               <section class="swagger-operation-description" style="padding-top: 1.5em;">
                 <div>Page365 will send to webhook url an order object when the order has updated or created. </div>
               </section>
@@ -1105,9 +1105,188 @@ https://api.page365.net/v1.0/graphql
               </div>
               <section class="webhook-section" style="padding-top: 1em;">Body example</section>
               <script src=https://gist.github.com/jaikox2/aff78611b25f33eaa242e85a2715062e.js></script>
+              <div style="border-bottom: 1px solid #e2e2e2; font-size:24px; padding-top: 2em;">#Customer event</div>
+              <section class="swagger-operation-description" style="padding-top: 1.5em;">
+                <div>Page365 will send to webhook url a customer object when the customer has updated or created. </div>
+              </section>
+              <section class="swagger-webhook-body" style="padding-top: 1em;">
+                <div class="prop-row prop-group">
+                  <div class="prop-name">
+                    <div class="prop-title">key:
+                      <span class="prop-type">
+                        <div class="json-property-type">String</div>
+                        <span class="json-property-range" title="Value limits"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="prop-value">
+                    <p>event type should be &quot;customer.create&quot; for create event and &quot;customer.update&quot; for update event</p>
+                  </div>
+                </div>
+                <div class="prop-row prop-group">
+                  <div class="prop-name">
+                    <div class="prop-title">merchantToken:
+                      <span class="prop-type">
+                        <div class="json-property-type">String</div>
+                        <span class="json-property-range" title="Value limits"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="prop-value">
+                    <p>a token reference with the merchant account.</p>
+                  </div>
+                </div>
+                <div class="prop-row prop-group">
+                  <div class="prop-name">
+                    <div class="prop-title">body:
+                      <span class="prop-type">
+                        <div class="json-property-type">customer object</div>
+                        <span class="json-property-range" title="Value limits"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="prop-value">
+                    <p>a customer object.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="webhook-section" style="padding-top: 1em;">Customer object</section>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">id:
+                    <span class="prop-type">
+                      <div class="json-property-type">ID</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Unique object reference number.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">name:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Name.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">phone:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Phone.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">email:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Email.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">address:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Address.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">note:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Note.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">type:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Plateform which customer come from.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">tags:
+                    <span class="prop-type">
+                      <div class="json-property-type">Array&lt;tag&gt;</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Customer tags.</p>
+                </div>
+              </div>
+              <section class="webhook-section" style="padding-top: 1em;">Tag object</section>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">id:
+                    <span class="prop-type">
+                      <div class="json-property-type">ID</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Unique object reference number.</p>
+                </div>
+              </div>
+              <div class="prop-row prop-group">
+                <div class="prop-name">
+                  <div class="prop-title">name:
+                    <span class="prop-type">
+                      <div class="json-property-type">String</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="prop-value">
+                  <p>Name.</p>
+                </div>
+              </div>
+              <section class="webhook-section" style="padding-top: 1em;">Body example</section>
+              <script src=https://gist.github.com/jaikox2/657df7686bab584abdeb6162fb8194e0.js></script>
             </div>
           </div>
-          <h1 id="tag-Product" class="swagger-summary-tag" data-traverse-target="tag-Product">Product</h1>
+          <h1 id="tag-Product" class="swagger-summary-tag" data-traverse-target="tag-Product" style="color: black;">Product</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>Fetch merchant product information</p>
@@ -1531,7 +1710,7 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Product-Category" class="swagger-summary-tag" data-traverse-target="tag-Product-Category">Product Category</h1>
+          <h1 id="tag-Product-Category" class="swagger-summary-tag" data-traverse-target="tag-Product-Category" style="color: black;">Product Category</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>Fetch merchant product category information</p>
@@ -1874,7 +2053,7 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Order" class="swagger-summary-tag" data-traverse-target="tag-Order">Order</h1>
+          <h1 id="tag-Order" class="swagger-summary-tag" data-traverse-target="tag-Order" style="color: black;">Order</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>Fetch merchant order information</p>
@@ -2314,7 +2493,7 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
-          <h1 id="tag-Customer" class="swagger-summary-tag" data-traverse-target="tag-Customer">Customer</h1>
+          <h1 id="tag-Customer" class="swagger-summary-tag" data-traverse-target="tag-Customer" style="color: black;">Customer</h1>
           <div class="tag-description doc-row">
             <div class="doc-copy" style="float: left;">
               <p>Fetch merchant customer information</p>

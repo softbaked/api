@@ -297,6 +297,11 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     margin-bottom: 0.5em;
     color: #f68b1f;
     font-size: .9rem; }
+  #spectacle .doc-copy a {
+    color: black;
+    cursor: default; }
+  #spectacle .swagger-responses a {
+    color: #1779ba; }
   #spectacle #logo {
     text-align: center;
     padding-right: 0.5rem;
