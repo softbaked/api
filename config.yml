@@ -204,6 +204,76 @@ domains:
                 type: ISO8601DateTime
                 desc: Update at.
         example_link: https://gist.github.com/jaikox2/aff78611b25f33eaa242e85a2715062e.js
+      - name: "Order item event"
+        desc: |
+          Page365 will send to webhook url a order item object when the customer has updated or created.
+        webhook_body:
+          - field: key
+            type: String
+            desc: event type should be "orderitem.create" for create event and "orderitem.update" for update event
+          - field: merchantToken
+            type: String
+            desc: a token reference with the merchant account.
+          - field: body
+            type: Order item object
+            desc: an order item object.
+        sub_body:
+          - section_name: OrderItem object
+            fields:
+              - field: id
+                type: ID
+                desc: Unique object reference number.
+              - field: name
+                type: String
+                desc: Name.
+              - field: note
+                type: String
+                desc: Note.
+              - field: quantity
+                type: Int
+                desc: Quantity.
+              - field: price
+                type: Float
+                desc: Price.
+              - field: subtotal
+                type: Float
+                desc: Sum of items price.
+              - field: productId
+                type: ID
+                desc: Unique object reference number of product.
+              - field: orderId
+                type: ID
+                desc: Unique object reference number of order.
+        example_link: https://gist.github.com/spnve/79e479e82ed06443c9a5e0b2c2cc20c9.js
+      - name: "Bank account event"
+        desc: |
+          Page365 will send to webhook url a bank account object when the bank account has updated or created.
+        webhook_body:
+          - field: key
+            type: String
+            desc: event type should be "bankaccount.create" for create event and "bankaccount.update" for update event
+          - field: merchantToken
+            type: String
+            desc: a token reference with the merchant account.
+          - field: body
+            type: Bank account object
+            desc: an bank account object.
+        sub_body:
+          - section_name: BankAccount object
+            fields:
+              - field: id
+                type: ID
+                desc: Unique object reference number.
+              - field: "no"
+                type: String
+                desc: Bank account number.
+              - field: name
+                type: String
+                desc: Name.
+              - field: bankSlug
+                type: String
+                desc: Provider code.
+        example_link: https://gist.github.com/spnve/dc9085f6dc4769a633bc6d3b0b18a86f.js
       - name: "Customer event"
         desc: | 
           Page365 will send to webhook url a customer object when the customer has updated or created.
