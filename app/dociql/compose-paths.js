@@ -44,7 +44,7 @@ module.exports = function (domains, graphQLSchema) {
         })
 
         var examples = generateExample(queryTokens[0].toLowerCase(), target, expandFields)
-
+        const requiredField = usecase.require || [];
         const responseSchema = convertTypeToSchema(target.type);
         responseSchema.example = examples.schema;
 
@@ -52,10 +52,12 @@ module.exports = function (domains, graphQLSchema) {
             name: _.name,
             description: _.description,
             in: "query",
+            required: requiredField.includes(_.name),
             schema: convertTypeToSchema(_.type)
         })) : [];
 
-        const bodyArg = { in: "body",
+        const bodyArg = { 
+            in: "body",
             example: examples.query,
             schema: args.length == 0 ?
                 null :
