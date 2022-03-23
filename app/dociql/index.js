@@ -41,5 +41,9 @@ module.exports = function (specPath, headers, introspectionUrl) {
         definitions: jsonSchema.definitions
     }
 
+    // https://softbaked.co/T8206
+    // bug - nested loop
+    delete jsonSchema.definitions.Customer.properties.orders.items;
+
     return swaggerSpec
 }

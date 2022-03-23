@@ -329,36 +329,51 @@ domains:
     - name: Fetch products
       description: Fetch all product information owned by merchant
       query: query.products
+      require: token
     - name: Fetch product
       description: Fetch product information by id
       query: query.product
+      require: id,token
   - name: Product Category
     description: Fetch merchant product category information
     usecases:
     - name: Fetch product categories
       description: Fetch all product category information owned by merchant
       query: query.productCategories
+      require: id,token
     - name: Fetch product category
       description: Fetch product category information by id
       query: query.productCategory
+      require: id,token
   - name: Order
     description: Fetch merchant order information
     usecases:
     - name: Fetch orders
       description: Fetch all order information owned by merchant
       query: query.orders
+      require: token
     - name: Fetch order
       description: Fetch order information by id
       query: query.order
+      require: id,token
   - name: Customer
     description: Fetch merchant customer information
     usecases:
     - name: Fetch customers
       description: Fetch all customer information owned by merchant
       query: query.customers
+      require: token
     - name: Fetch customer
       description: Fetch customer information by id
       query: query.customer
+      require: id,token
+  - name: Bank
+    description: Fetch bank account information
+    usecases:
+    - name: Fetch banks
+      description: Fetch all bank account information owned by merchant
+      query: query.bankAccounts
+      require: id,token
 
 schema:
   except: [
