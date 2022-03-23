@@ -86,9 +86,19 @@
               </li>
             </ul>
           </section>
+          <section>
+            <a href="#tag-Bank">Bank</a>
+            <ul>
+              <li>
+                <a href="#operation-fetch_banks-post"> Fetch banks </a>
+              </li>
+            </ul>
+          </section>
           <h5>Schema Definitions</h5>
           <a href="#definition-Album"> Album </a>
           <a href="#definition-BankAccount"> BankAccount </a>
+          <a href="#definition-BankAccountConnection"> BankAccountConnection </a>
+          <a href="#definition-BankAccountEdge"> BankAccountEdge </a>
           <a href="#definition-Boolean"> Boolean </a>
           <a href="#definition-Customer"> Customer </a>
           <a href="#definition-CustomerConnection"> CustomerConnection </a>
@@ -1629,6 +1639,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -1696,7 +1707,7 @@ https://api.page365.net/v1.0/graphql
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p>Sort by field (sold, actual, reserved) and type (desc, asc) eg. &quot;sold_desc&quot;</p>
+                      <p>Sort by field (sold, actual, reserved, bestsellers) and type (desc, asc) eg. &quot;sold_desc&quot;</p>
                     </div>
                   </div>
                 </section>
@@ -1819,6 +1830,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Unique object reference number</p>
@@ -1832,6 +1844,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2053,6 +2066,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2187,6 +2201,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Unique object reference number</p>
@@ -2200,6 +2215,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2396,6 +2412,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2600,6 +2617,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Unique object reference number</p>
@@ -2613,6 +2631,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2836,6 +2855,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -2984,6 +3004,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Unique object reference number</p>
@@ -2997,6 +3018,7 @@ https://api.page365.net/v1.0/graphql
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
+                      <span class="json-property-required"></span>
                     </div>
                     <div class="prop-value">
                       <p>Access token from authentication operation</p>
@@ -3089,6 +3111,187 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-Bank" class="swagger-summary-tag" data-traverse-target="tag-Bank" style="color: black;">Bank</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy" style="float: left;">
+              <p>Fetch bank account information</p>
+            </div>
+          </div>
+          <div id="operation-fetch_banks-post" class="operation panel" data-traverse-target="operation-fetch_banks-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Bank">Bank</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Fetch banks</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Fetch all bank account information owned by merchant</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">first:
+                        <span class="prop-type">
+                          <div class="json-property-type">integer</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Returns the first
+                        <em>n</em> elements from the list.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">after:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Returns the elements in the list that come after the specified cursor.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">last:
+                        <span class="prop-type">
+                          <div class="json-property-type">integer</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Returns the last
+                        <em>n</em> elements from the list.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">before:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Returns the elements in the list that come before the specified cursor.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">token:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Access token from authentication operation</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> bankAccounts<span class="hljs-tag">(<span class="hljs-code">$first</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$after</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$last</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$before</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$token</span>:<span class="hljs-type"> String!</span>)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">bankAccounts<span class="hljs-tag">(first: <span class="hljs-code">$first</span>, after: <span class="hljs-code">$after</span>, last: <span class="hljs-code">$last</span>, before: <span class="hljs-code">$before</span>, token: <span class="hljs-code">$token</span>)</span><span class="hljs-tag">{
+  }</span></span>
+}</span></span>
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;first&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
+  <span class="hljs-attr">&quot;after&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;last&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
+  <span class="hljs-attr">&quot;before&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://api.staging365.net/v1.0/graphql?query=query%20bankAccounts(%24first%3A%20Int%2C%20%24after%3A%20String%2C%20%24last%3A%20Int%2C%20%24before%3A%20String%2C%20%24token%3A%20String!)%7B%0A%20%20bankAccounts(first%3A%20%24first%2C%20after%3A%20%24after%2C%20last%3A%20%24last%2C%20before%3A%20%24before%2C%20token%3A%20%24token)%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/BankAccountConnection">BankAccountConnection</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;bankAccounts&quot;</span>: {}
   }
 }
 </code></pre> </body>
@@ -3245,6 +3448,162 @@ https://api.page365.net/v1.0/graphql
               </div>
             </div>
           </div>
+          <div id="definition-BankAccountConnection" class="definition panel" data-traverse-target="definition-BankAccountConnection">
+            <h2 class="panel-title">
+              <a name="/definitions/BankAccountConnection"></a>BankAccountConnection: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>The connection type for BankAccount.</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="edges" class="has-description">
+                      <span class="json-property-name">edges:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/BankAccountEdge">BankAccountEdge</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>A list of edges.</p>
+                    </dd>
+                    <dt data-property-name="nodes" class="has-description">
+                      <span class="json-property-name">nodes:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/BankAccount">BankAccount</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>A list of nodes.</p>
+                    </dd>
+                    <dt data-property-name="pageInfo" class="has-description">
+                      <span class="json-property-name">pageInfo:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/PageInfo">PageInfo</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Information to aid in pagination.</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;edges&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;cursor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;node&quot;</span>: {
+        <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    }
+  ],
+  <span class="hljs-attr">&quot;nodes&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-BankAccountEdge" class="definition panel" data-traverse-target="definition-BankAccountEdge">
+            <h2 class="panel-title">
+              <a name="/definitions/BankAccountEdge"></a>BankAccountEdge: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>An edge in a connection.</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="cursor" class="has-description">
+                      <span class="json-property-name">cursor:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>A cursor for use in pagination.</p>
+                    </dd>
+                    <dt data-property-name="node" class="has-description">
+                      <span class="json-property-name">node:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/BankAccount">BankAccount</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>The item at the end of the edge.</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;cursor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;node&quot;</span>: {
+    <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Boolean" class="definition panel" data-traverse-target="definition-Boolean">
             <h2 class="panel-title">
               <a name="/definitions/Boolean"></a>Boolean: boolean
@@ -3358,11 +3717,7 @@ https://api.page365.net/v1.0/graphql
                     </dd>
                     <dt data-property-name="orders" class="has-description">
                       <span class="json-property-name">orders:</span>
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-array">
-                          <a class="json-schema-ref" href="#/definitions/Order">Order</a>
-                        </div>
-                      </div>
+                      <div class="json-property-type">array</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
@@ -3419,66 +3774,15 @@ https://api.page365.net/v1.0/graphql
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;orders&quot;</span>: [
+  <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+  <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;tags&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-      <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-        <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-      },
-      <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;customer&quot;</span>: {
-        <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;orders&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-              <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            },
-            <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;customer&quot;</span>: {
-              <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;orders&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                    <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                  },
-                  <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;customer&quot;</span>: {
-                    <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;orders&quot;</span>: [
-                      <span class="hljs-literal">null</span>
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
-  ]
+  ],
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -3559,61 +3863,34 @@ https://api.page365.net/v1.0/graphql
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;orders&quot;</span>: [
+        <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+        <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;tags&quot;</span>: [
           {
-            <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-              <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            },
-            <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;customer&quot;</span>: {
-              <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;orders&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                    <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                  },
-                  <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;customer&quot;</span>: {
-                    <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;orders&quot;</span>: [
-                      {
-                        <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                        <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                          <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                        },
-                        <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                        <span class="hljs-attr">&quot;customer&quot;</span>: {
-                          <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
           }
-        ]
+        ],
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
+    }
+  ],
+  <span class="hljs-attr">&quot;nodes&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;tags&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ]
 }
@@ -3682,62 +3959,15 @@ https://api.page365.net/v1.0/graphql
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;orders&quot;</span>: [
+    <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;tags&quot;</span>: [
       {
-        <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-          <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-        },
-        <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;customer&quot;</span>: {
-          <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;orders&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-              },
-              <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;customer&quot;</span>: {
-                <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;orders&quot;</span>: [
-                  {
-                    <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                    <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                      <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    },
-                    <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;customer&quot;</span>: {
-                      <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
-    ]
+    ],
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   }
 }
 </code></pre> </body>
@@ -3934,7 +4164,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Discount</p>
@@ -4022,7 +4251,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Total amount paid by customer</p>
@@ -4059,7 +4287,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Promotion code which be use in this order</p>
@@ -4085,7 +4312,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Delivery cost in baht</p>
@@ -4098,7 +4324,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Shipping title</p>
@@ -4163,7 +4388,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Tax no.</p>
@@ -4189,7 +4413,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Delivery tracking code</p>
@@ -4269,8 +4492,25 @@ https://api.page365.net/v1.0/graphql
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;orders&quot;</span>: [
+    <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;tags&quot;</span>: [
       {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    ],
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  },
+  <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;order&quot;</span>: {
         <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
         <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
           <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4285,40 +4525,22 @@ https://api.page365.net/v1.0/graphql
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;orders&quot;</span>: [
+          <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+          <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;tags&quot;</span>: [
             {
-              <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-              },
-              <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;customer&quot;</span>: {
-                <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;orders&quot;</span>: [
-                  {
-                    <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                    <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                      <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    }
-                  }
-                ]
-              }
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
             }
-          ]
-        }
+          ],
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
       }
-    ]
-  }
+    }
+  ]
 }
 </code></pre> </body>
                   </html>
@@ -4408,8 +4630,25 @@ https://api.page365.net/v1.0/graphql
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;orders&quot;</span>: [
+          <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+          <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;tags&quot;</span>: [
             {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;items&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;order&quot;</span>: {
               <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
               <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                 <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4424,35 +4663,18 @@ https://api.page365.net/v1.0/graphql
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;orders&quot;</span>: [
+                <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
                   {
-                    <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                    <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                      <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    },
-                    <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;customer&quot;</span>: {
-                      <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;orders&quot;</span>: [
-                        {
-                          <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                          <span class="hljs-attr">&quot;bankAccount&quot;</span>: {}
-                        }
-                      ]
-                    }
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                   }
                 ]
               }
             }
-          ]
-        }
+          }
+        ]
       }
     }
   ]
@@ -4531,8 +4753,25 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;orders&quot;</span>: [
+      <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;tags&quot;</span>: [
         {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;items&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;order&quot;</span>: {
           <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
           <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
             <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4547,38 +4786,20 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;orders&quot;</span>: [
+            <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
               {
-                <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                  <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                },
-                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;customer&quot;</span>: {
-                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                      <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                        <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
-                      }
-                    }
-                  ]
-                }
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
               }
-            ]
-          }
+            ],
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+          },
+          <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
         }
-      ]
-    }
+      }
+    ]
   }
 }
 </code></pre> </body>
@@ -4731,8 +4952,25 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;orders&quot;</span>: [
+      <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;tags&quot;</span>: [
         {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;items&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;order&quot;</span>: {
           <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
           <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
             <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4747,35 +4985,18 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;orders&quot;</span>: [
+            <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
               {
-                <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                  <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                },
-                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;customer&quot;</span>: {
-                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                      <span class="hljs-attr">&quot;bankAccount&quot;</span>: {}
-                    }
-                  ]
-                }
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
               }
             ]
           }
         }
-      ]
-    }
+      }
+    ]
   }
 }
 </code></pre> </body>
@@ -5404,16 +5625,10 @@ https://api.page365.net/v1.0/graphql
     <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+    <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
       {
+        <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;order&quot;</span>: {
           <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -5430,8 +5645,25 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;orders&quot;</span>: [
+            <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
               {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+          },
+          <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;items&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;order&quot;</span>: {
                 <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
                 <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                   <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -5439,20 +5671,10 @@ https://api.page365.net/v1.0/graphql
                   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                 },
-                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;customer&quot;</span>: {
-                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
-                    {}
-                  ]
-                }
+                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
               }
-            ]
-          }
+            }
+          ]
         }
       }
     ]
@@ -5646,16 +5868,10 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+            <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
               {
+                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;order&quot;</span>: {
                   <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -5672,10 +5888,17 @@ https://api.page365.net/v1.0/graphql
                     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                     <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;orders&quot;</span>: [
-                      {}
-                    ]
-                  }
+                    <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                    <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;tags&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                      }
+                    ],
+                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                  },
+                  <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
                 }
               }
             ]
@@ -5784,16 +6007,10 @@ https://api.page365.net/v1.0/graphql
                   <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
                   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+                  <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
                     {
+                      <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;order&quot;</span>: {
                         <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -5807,7 +6024,16 @@ https://api.page365.net/v1.0/graphql
                         <span class="hljs-attr">&quot;customer&quot;</span>: {
                           <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                           <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                          <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;tags&quot;</span>: [
+                            {
+                              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                            }
+                          ]
                         }
                       }
                     }
@@ -5906,16 +6132,10 @@ https://api.page365.net/v1.0/graphql
               <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+              <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
                 {
+                  <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;order&quot;</span>: {
                     <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -5930,7 +6150,16 @@ https://api.page365.net/v1.0/graphql
                       <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;tags&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                        }
+                      ]
                     }
                   }
                 }
@@ -6025,16 +6254,10 @@ https://api.page365.net/v1.0/graphql
           <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-          <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+          <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
             {
+              <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;order&quot;</span>: {
                 <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -6051,24 +6274,33 @@ https://api.page365.net/v1.0/graphql
                   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
+                  <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                  <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;tags&quot;</span>: [
                     {
+                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                    }
+                  ],
+                  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                },
+                <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;items&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;order&quot;</span>: {
                       <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
                       <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                         <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                      },
-                      <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;customer&quot;</span>: {
-                        <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
                       }
                     }
-                  ]
-                }
+                  }
+                ]
               }
             }
           ]
@@ -6146,16 +6378,10 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+      <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
         {
+          <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;order&quot;</span>: {
             <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -6172,25 +6398,34 @@ https://api.page365.net/v1.0/graphql
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
               <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;orders&quot;</span>: [
+              <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+              <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;tags&quot;</span>: [
                 {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                }
+              ],
+              <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            },
+            <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+            <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;items&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;order&quot;</span>: {
                   <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
                   <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                     <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                  },
-                  <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;customer&quot;</span>: {
-                    <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                   }
                 }
-              ]
-            }
+              }
+            ]
           }
         }
       ]
@@ -6277,6 +6512,18 @@ https://api.page365.net/v1.0/graphql
                     </dt>
                     <dd>
                       <p>Unique object reference number</p>
+                    </dd>
+                    <dt data-property-name="latestStockMoves" class="has-description">
+                      <span class="json-property-name">latestStockMoves:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/StockMove">StockMove</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>latest 100 Stock transactions</p>
                     </dd>
                     <dt data-property-name="name" class="has-description">
                       <span class="json-property-name">name:</span>
@@ -6437,16 +6684,10 @@ https://api.page365.net/v1.0/graphql
   <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+  <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
     {
+      <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;order&quot;</span>: {
         <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -6463,8 +6704,25 @@ https://api.page365.net/v1.0/graphql
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;orders&quot;</span>: [
+          <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+          <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;tags&quot;</span>: [
             {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        },
+        <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+        <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;items&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;order&quot;</span>: {
               <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
               <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                 <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -6476,22 +6734,11 @@ https://api.page365.net/v1.0/graphql
               <span class="hljs-attr">&quot;customer&quot;</span>: {
                 <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;orders&quot;</span>: [
-                  {
-                    <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                    <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                      <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
-                    }
-                  }
-                ]
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
               }
             }
-          ]
-        }
+          }
+        ]
       }
     }
   ]
@@ -6575,16 +6822,10 @@ https://api.page365.net/v1.0/graphql
         <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+        <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
           {
+            <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;order&quot;</span>: {
               <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -6601,8 +6842,25 @@ https://api.page365.net/v1.0/graphql
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;orders&quot;</span>: [
+                <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+                <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
                   {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              },
+              <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;items&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;order&quot;</span>: {
                     <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
                     <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                       <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -6611,19 +6869,10 @@ https://api.page365.net/v1.0/graphql
                       <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                     },
                     <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                    <span class="hljs-attr">&quot;customer&quot;</span>: {
-                      <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;orders&quot;</span>: [
-                        {}
-                      ]
-                    }
+                    <span class="hljs-attr">&quot;customer&quot;</span>: {}
                   }
-                ]
-              }
+                }
+              ]
             }
           }
         ]
@@ -6696,16 +6945,10 @@ https://api.page365.net/v1.0/graphql
     <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;cost&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;ordersCount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;priceBeforeDiscount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;profit&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;reserved&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;reservedOrderItems&quot;</span>: [
+    <span class="hljs-attr">&quot;latestStockMoves&quot;</span>: [
       {
+        <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;order&quot;</span>: {
           <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
@@ -6722,8 +6965,25 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;orders&quot;</span>: [
+            <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
               {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+          },
+          <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;items&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;order&quot;</span>: {
                 <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
                 <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
                   <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -6733,21 +6993,11 @@ https://api.page365.net/v1.0/graphql
                 },
                 <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;customer&quot;</span>: {
-                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                      <span class="hljs-attr">&quot;bankAccount&quot;</span>: {}
-                    }
-                  ]
+                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                 }
               }
-            ]
-          }
+            }
+          ]
         }
       }
     ]
@@ -7024,8 +7274,25 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;orders&quot;</span>: [
+      <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+      <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;tags&quot;</span>: [
         {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;discount&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;expiresOn&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;items&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;order&quot;</span>: {
           <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
           <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
             <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -7040,35 +7307,18 @@ https://api.page365.net/v1.0/graphql
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;orders&quot;</span>: [
+            <span class="hljs-attr">&quot;orders&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+            <span class="hljs-attr">&quot;phone&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
               {
-                <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;bankAccount&quot;</span>: {
-                  <span class="hljs-attr">&quot;bankSlug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                },
-                <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;customer&quot;</span>: {
-                  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;orders&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;auto&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                      <span class="hljs-attr">&quot;bankAccount&quot;</span>: {}
-                    }
-                  ]
-                }
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
               }
             ]
           }
         }
-      ]
-    }
+      }
+    ]
   }
 }
 </code></pre> </body>
