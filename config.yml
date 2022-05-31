@@ -19,35 +19,35 @@ domains:
       Before using API, you need to register your app profile and get approve by Page365 and we will send you SECRET_KEY for using in authentication process as flowchart below.
     diagram_image_name: registration.png
     usecases:
-    - name: Create profile
-      description: Create profile for using in authentication process and grant permission to fetch merchant information. These argument some will be display to merchant for notify them that your integration is available such as name, some will be use for report and notify an update (deprecate API) such as phone and email, some will be use for sending an event when have occurred on merchant accounts such as webhookUrl
-      query: mutation.createPublicApp
+      - name: Create profile
+        description: Create profile for using in authentication process and grant permission to fetch merchant information. These argument some will be display to merchant for notify them that your integration is available such as name, some will be use for report and notify an update (deprecate API) such as phone and email, some will be use for sending an event when have occurred on merchant accounts such as webhookUrl
+        query: mutation.createPublicApp
   - name: Authentication
     description: |
       After profile approved, Page365 will send you SECRET_KEY which will be use as part of access token creating process. Access token is needed for every request as an identifier and each merchant will use difference unique access token even from the same profile.
-      
+
       In access token creation process you will need 2 parameters (SECRET_KEY, MERCHANT_TOKEN) you can find MERCHANT_TOKEN from each merchant directly and
-      
+
       PROVIDER NEEDS TO KEEP MERCHANT_TOKEN IN PRIVATE AND NOT ALLOW TO PUBLIC TOKEN TO OTHER
     diagram_image_name: authentication.png
     usecases:
-    - name: Generate access token
-      description: Generate access token for using in identification when calling API
-      query: query.generateToken
+      - name: Generate access token
+        description: Generate access token for using in identification when calling API
+        query: query.generateToken
   - name: Webhooks
     description: |
       After the profile is approved and allowed by the merchant account, Page365 will send an event that has occurred on the merchant account.
 
       Validating Payloads: - 
         Every webhook will have SHA1 signature included in the request's X-Hub-Signature header, preceded with sha1=. You don't have to validate the payload, but you should.
-      
+
       To validate the payload: - 
         Generate a SHA1 signature using the payload and your secret_key - Compare your signature to the signature in the X-Hub-Signature header (everything after sha1=). If the signatures match, the payload is genuine.
 
       HTTP method: - Use POST http method for send to webhook url.
     sections:
       - name: "Order event"
-        desc: | 
+        desc: |
           Page365 will send to webhook url an order object when the order has updated or created.
         webhook_body:
           - field: key
@@ -275,7 +275,7 @@ domains:
                 desc: Provider code.
         example_link: https://gist.github.com/spnve/dc9085f6dc4769a633bc6d3b0b18a86f.js
       - name: "Customer event"
-        desc: | 
+        desc: |
           Page365 will send to webhook url a customer object when the customer has updated or created.
         webhook_body:
           - field: key
@@ -326,56 +326,61 @@ domains:
   - name: Product
     description: Fetch merchant product information
     usecases:
-    - name: Fetch products
-      description: Fetch all product information owned by merchant
-      query: query.products
-      require: token
-    - name: Fetch product
-      description: Fetch product information by id
-      query: query.product
-      require: id,token
+      - name: Fetch products
+        description: Fetch all product information owned by merchant
+        query: query.products
+        require: token
+      - name: Fetch product
+        description: Fetch product information by id
+        query: query.product
+        require: id,token
   - name: Product Category
     description: Fetch merchant product category information
     usecases:
-    - name: Fetch product categories
-      description: Fetch all product category information owned by merchant
-      query: query.productCategories
-      require: id,token
-    - name: Fetch product category
-      description: Fetch product category information by id
-      query: query.productCategory
-      require: id,token
+      - name: Fetch product categories
+        description: Fetch all product category information owned by merchant
+        query: query.productCategories
+        require: id,token
+      - name: Fetch product category
+        description: Fetch product category information by id
+        query: query.productCategory
+        require: id,token
   - name: Order
     description: Fetch merchant order information
     usecases:
-    - name: Fetch orders
-      description: Fetch all order information owned by merchant
-      query: query.orders
-      require: token
-    - name: Fetch order
-      description: Fetch order information by id
-      query: query.order
-      require: id,token
+      - name: Fetch orders
+        description: Fetch all order information owned by merchant
+        query: query.orders
+        require: token
+      - name: Fetch order
+        description: Fetch order information by id
+        query: query.order
+        require: id,token
+  - name: Stock
+    description: Update stock
+    usecases:
+      - name: Update stock
+        description: Update product stock owned by merchant
+        query: mutation.createStockMove
+        require: token,sku,price,quantity
   - name: Customer
     description: Fetch merchant customer information
     usecases:
-    - name: Fetch customers
-      description: Fetch all customer information owned by merchant
-      query: query.customers
-      require: token
-    - name: Fetch customer
-      description: Fetch customer information by id
-      query: query.customer
-      require: id,token
+      - name: Fetch customers
+        description: Fetch all customer information owned by merchant
+        query: query.customers
+        require: token
+      - name: Fetch customer
+        description: Fetch customer information by id
+        query: query.customer
+        require: id,token
   - name: Bank
     description: Fetch bank account information
     usecases:
-    - name: Fetch banks
-      description: Fetch all bank account information owned by merchant
-      query: query.bankAccounts
-      require: id,token
+      - name: Fetch banks
+        description: Fetch all bank account information owned by merchant
+        query: query.bankAccounts
+        require: id,token
 
 schema:
-  except: [
-    'Account', 'Home', 'Plan', 'PageInfo',
-  ]
+  except: ["Account", "Home", "Plan", "PageInfo"]
