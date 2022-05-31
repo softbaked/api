@@ -76,6 +76,14 @@
             </ul>
           </section>
           <section>
+            <a href="#tag-Stock">Stock</a>
+            <ul>
+              <li>
+                <a href="#operation-update_stock-post"> Update stock </a>
+              </li>
+            </ul>
+          </section>
+          <section>
             <a href="#tag-Customer">Customer</a>
             <ul>
               <li>
@@ -1710,6 +1718,19 @@ https://api.page365.net/v1.0/graphql
                       <p>Sort by field (sold, actual, reserved, bestsellers) and type (desc, asc) eg. &quot;sold_desc&quot;</p>
                     </div>
                   </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">enabled:
+                        <span class="prop-type">
+                          <div class="json-property-type">boolean</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Filter by field enabled</p>
+                    </div>
+                  </div>
                 </section>
               </div>
               <div class="doc-examples">
@@ -1722,8 +1743,8 @@ https://api.page365.net/v1.0/graphql
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> products<span class="hljs-tag">(<span class="hljs-code">$first</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$after</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$last</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$before</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$token</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$search</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$status</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$scope</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$categoryId</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$orderBy</span>:<span class="hljs-type"> String)</span>{
-  products(first: <span class="hljs-code">$first</span>, after: <span class="hljs-code">$after</span>, last: <span class="hljs-code">$last</span>, before: <span class="hljs-code">$before</span>, token: <span class="hljs-code">$token</span>, search: <span class="hljs-code">$search</span>, status: <span class="hljs-code">$status</span>, scope: <span class="hljs-code">$scope</span>, categoryId: <span class="hljs-code">$categoryId</span>, orderBy: <span class="hljs-code">$orderBy</span>)</span><span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> products<span class="hljs-tag">(<span class="hljs-code">$first</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$after</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$last</span>:<span class="hljs-type"> Int,</span> <span class="hljs-code">$before</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$token</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$search</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$status</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$scope</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$categoryId</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$orderBy</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$enabled</span>:<span class="hljs-type"> Boolean)</span>{
+  products(first: <span class="hljs-code">$first</span>, after: <span class="hljs-code">$after</span>, last: <span class="hljs-code">$last</span>, before: <span class="hljs-code">$before</span>, token: <span class="hljs-code">$token</span>, search: <span class="hljs-code">$search</span>, status: <span class="hljs-code">$status</span>, scope: <span class="hljs-code">$scope</span>, categoryId: <span class="hljs-code">$categoryId</span>, orderBy: <span class="hljs-code">$orderBy</span>, enabled: <span class="hljs-code">$enabled</span>)</span><span class="hljs-tag">{
   }</span></span>
 }
 </code></pre> </body>
@@ -1743,12 +1764,13 @@ https://api.page365.net/v1.0/graphql
   <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;scope&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;categoryId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;orderBy&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;orderBy&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;enabled&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://api.staging365.net/v1.0/graphql?query=query%20products(%24first%3A%20Int%2C%20%24after%3A%20String%2C%20%24last%3A%20Int%2C%20%24before%3A%20String%2C%20%24token%3A%20String!%2C%20%24search%3A%20String%2C%20%24status%3A%20String%2C%20%24scope%3A%20String%2C%20%24categoryId%3A%20String%2C%20%24orderBy%3A%20String)%7B%0A%20%20products(first%3A%20%24first%2C%20after%3A%20%24after%2C%20last%3A%20%24last%2C%20before%3A%20%24before%2C%20token%3A%20%24token%2C%20search%3A%20%24search%2C%20status%3A%20%24status%2C%20scope%3A%20%24scope%2C%20categoryId%3A%20%24categoryId%2C%20orderBy%3A%20%24orderBy)%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://api.staging365.net/v1.0/graphql?query=query%20products(%24first%3A%20Int%2C%20%24after%3A%20String%2C%20%24last%3A%20Int%2C%20%24before%3A%20String%2C%20%24token%3A%20String!%2C%20%24search%3A%20String%2C%20%24status%3A%20String%2C%20%24scope%3A%20String%2C%20%24categoryId%3A%20String%2C%20%24orderBy%3A%20String%2C%20%24enabled%3A%20Boolean)%7B%0A%20%20products(first%3A%20%24first%2C%20after%3A%20%24after%2C%20last%3A%20%24last%2C%20before%3A%20%24before%2C%20token%3A%20%24token%2C%20search%3A%20%24search%2C%20status%3A%20%24status%2C%20scope%3A%20%24scope%2C%20categoryId%3A%20%24categoryId%2C%20orderBy%3A%20%24orderBy%2C%20enabled%3A%20%24enabled)%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -2754,6 +2776,202 @@ https://api.page365.net/v1.0/graphql
       <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;vat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
       <span class="hljs-attr">&quot;vatIncluded&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-Stock" class="swagger-summary-tag" data-traverse-target="tag-Stock" style="color: black;">Stock</h1>
+          <div class="tag-description doc-row">
+            <div class="doc-copy" style="float: left;">
+              <p>Update stock</p>
+            </div>
+          </div>
+          <div id="operation-update_stock-post" class="operation panel" data-traverse-target="operation-update_stock-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Stock">Stock</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Update stock</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Update product stock owned by merchant</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">token:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Access token from authentication operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">sku:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>SKU</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">price:
+                        <span class="prop-type">
+                          <div class="json-property-type">number</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Price</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">quantity:
+                        <span class="prop-type">
+                          <div class="json-property-type">integer</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p>Quantity</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">note:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Note</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h4>Example</h3>
+                    <h5>Request Content-Types:
+                      <span>application/json</span>
+                    </h5>
+                    <h5>Query</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> createStockMove<span class="hljs-tag">(<span class="hljs-code">$token</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$sku</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$price</span>:<span class="hljs-type"> Float!</span>, <span class="hljs-code">$quantity</span>:<span class="hljs-type"> Int!</span>, <span class="hljs-code">$note</span>:<span class="hljs-type"> String)</span>{
+  createStockMove(token: <span class="hljs-code">$token</span>, sku: <span class="hljs-code">$sku</span>, price: <span class="hljs-code">$price</span>, quantity: <span class="hljs-code">$quantity</span>, note: <span class="hljs-code">$note</span>)</span><span class="hljs-tag">{
+    <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">id</span>
+    <span class="hljs-symbol">note</span>
+    <span class="hljs-symbol">price</span>
+    <span class="hljs-symbol">quantity</span>
+    <span class="hljs-symbol">quantityAbs</span>
+    <span class="hljs-symbol">type</span>
+  }</span></span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;token&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;sku&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;quantity&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
+  <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://api.staging365.net/v1.0/graphql?query=mutation%20createStockMove(%24token%3A%20String!%2C%20%24sku%3A%20String!%2C%20%24price%3A%20Float!%2C%20%24quantity%3A%20Int!%2C%20%24note%3A%20String)%7B%0A%20%20createStockMove(token%3A%20%24token%2C%20sku%3A%20%24sku%2C%20price%3A%20%24price%2C%20quantity%3A%20%24quantity%2C%20note%3A%20%24note)%7B%0A%20%20%20%20createdAt%0A%20%20%20%20id%0A%20%20%20%20note%0A%20%20%20%20price%0A%20%20%20%20quantity%0A%20%20%20%20quantityAbs%0A%20%20%20%20type%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                      <a/> </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/StockMove">StockMove</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;createStockMove&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+      <span class="hljs-attr">&quot;quantity&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
+      <span class="hljs-attr">&quot;quantityAbs&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -4856,7 +5074,6 @@ https://api.page365.net/v1.0/graphql
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
                     <dd>
                       <p>Note</p>
@@ -6486,7 +6703,7 @@ https://api.page365.net/v1.0/graphql
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
-                      <p>SKU code</p>
+                      <p>Cf code</p>
                     </dd>
                     <dt data-property-name="cost" class="has-description">
                       <span class="json-property-name">cost:</span>
@@ -6620,6 +6837,18 @@ https://api.page365.net/v1.0/graphql
                     </dt>
                     <dd>
                       <p>Order which has this variant and order status in unpaid, transferred, paid</p>
+                    </dd>
+                    <dt data-property-name="sku" class="has-description">
+                      <span class="json-property-name">sku:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>SKU code</p>
                     </dd>
                     <dt data-property-name="sold" class="has-description">
                       <span class="json-property-name">sold:</span>
