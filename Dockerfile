@@ -4,6 +4,8 @@ MAINTAINER Kam Low <hello@sourcey.com>
 USER 0
 WORKDIR /opt
 
+RUN apt-get update && apt-get install python
+
 RUN apk add --no-cache \
   nodejs nodejs-npm g++ \
   python python-dev
