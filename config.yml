@@ -359,10 +359,14 @@ domains:
   - name: Stock
     description: Update stock
     usecases:
-      - name: Update stock
-        description: Update product stock owned by merchant
+      - name: Create stock move
+        description: Update single product stock owned by merchant
         query: mutation.createStockMove
-        require: token,sku,price,quantity
+        require: token,sku,price,quantity,note
+      - name: Create stock moves
+        description: Update products stock owned by merchant
+        query: mutation.createStockMoves
+        require: token,moves
   - name: Customer
     description: Fetch merchant customer information
     usecases:
