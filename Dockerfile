@@ -5,6 +5,7 @@ USER 0
 WORKDIR /opt
 
 RUN apt-get update && apt-get install python
+RUN apk add python2
 RUN apk add --no-cache --virtual .gyp python3 make g++
 
 RUN apk add --no-cache \
